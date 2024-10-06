@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="container">
+        <header class="header">
+            <h2><img style=" mix-blend-mode: multiply;" width="60px" height="50px" src="https://static.vecteezy.com/system/resources/previews/022/663/453/non_2x/shopping-bag-logo-icon-design-template-isolated-vector.jpg" alt=""><i>Brand</i></h2>
+              <nav id="nav">
+                <ul id="navlinks">
+                    <li><a href="#shopping">shopping</a></li>
+                    <li><a href="#Cart">Cart</a></li>
+                    <li><a href="#Contact">Contact us</a></li> 
+                </ul>
+              
+            </nav>
+        </header>
+        <section id="shopping" class="section">
+            <!-- <h2 id="main" style="text-align: center; padding: 2%;"></h2> -->
+            <marquee style="font-weight: 700; font-size: 2rem; padding: 2%; margin-top: 7%;"   behavior="scroll" direction="left">
+              Easy shopping, happy living...
+              </marquee> 
+            <div class="product-grid">
+                <div id="box1"class="product-item">
+                    <img id="product-img1" height="250px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFr_-TMJ_Olp9KO3cBrZlutw2m-dmgteCf8A&s" alt="product1">
+                    <h2 id="product-description1">Red Small Cotton T-Shirt</h2>
+                    <p id="product-price1">$45</p>
+                    <label for="color">Color:</label>
+                    <select id="color1" onclick="updateProduct1()">
+                      <option value="red">Red</option>
+                      <option value="blue">Blue</option>
+                    </select>
+                  
+                    <label for="size">Size:</label>
+                    <select id="size1" onchange="updateProduct1()">
+                      <option value="small">Small</option>
+                      <option value="medium">Medium</option>
+                    </select><br>
+                    <button  class="cart">Add To Cart</button>
+                    <button class="buy-now">Buy Now</button>
+                </div>
+                <div id="box2"class="product-item">
+                  <img id="product-img2" height="250px" src="https://rukminim2.flixcart.com/image/850/1000/xif0q/jean/t/3/h/26-j-60-lee-tex-original-imagnycsz3m4uebf.jpeg?q=20&crop=false" alt="product1">
+                  <h2 id="product-description2">Black Small Jeans</h2>
+                  <p id="product-price2">$55</p>
+                  <label for="color">Color:</label>
+                  <select id="color2" onchange="updateProduct2()">
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                  </select>
+                
+                  <label for="size">Size:</label>
+                  <select id="size2" onchange="updateProduct2()">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                  </select><br>
+                  <button class="cart">Add To Cart</button>
+                  <button class="buy-now">Buy Now</button>
+              </div>
+
+              <div id="cart" class="section">
+                <h2 style="text-align: center; color: rgb(20, 2, 138);">Your Cart</h2>
+                <div id="cart-items"></div>
+                <p>Total Price: <span id="total-price">$0</span></p>
+              </div>
+
+              <div id="box3"class="product-item">
+                <img id="product-img3" height="250px" src="https://www.atun.in/wp-content/uploads/2023/02/Fuchsia-2-570x760.jpg" alt="product3">
+                <h2 id="product-description3">pink Small shirt</h2>
+                <p id="product-price3">$65</p>
+                <label for="color">Color:</label>
+                <select id="color3" onchange="updateProduct3()">
+                  <option value="pink">Pink</option>
+                  <option value="blue">Blue</option>
+                </select>
+              
+                <label for="size">Size:</label>
+                <select id="size3" onchange="updateProduct3()">
+                  <option value="small">Small</option>
+                  <option value="medium">Medium</option>
+                </select><br>
+                <button class="cart">Add To Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+            <div id="box4"class="product-item">
+              <img id="product-img4" height="250px" src="https://www.vastranand.in/cdn/shop/files/1_871d6045-82d0-4209-b464-46ce51a4c7f3.jpg?v=1716447638" alt="product4">
+              <h2 id="product-description4">pink Small Dress</h2>
+              <p id="product-price4">$75</p>
+              <label for="color">Color:</label>
+              <select id="color4" onchange="updateProduct4()">
+                <option value="pink">Pink</option>
+                <option value="white">White</option>
+              </select>
+            
+              <label for="size">Size:</label>
+              <select id="size4" onchange="updateProduct4()">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+              </select><br>
+              <button class="cart">Add To Cart</button>
+              <button class="buy-now">Buy Now</button>
+          </div>
+          <div id="box5"class="product-item">
+            <img id="product-img5" height="250px" src="https://assets.ajio.com/medias/sys_master/root/20240406/jTor/6610dc8616fd2c6e6aa17c06/-473Wx593H-466855053-yellow-MODEL.jpg" alt="product5">
+            <h2 id="product-description5">yellow Small Dress</h2>
+            <p id="product-price5">$85</p>
+            <label for="color">Color:</label>
+            <select id="color5" onchange="updateProduct5()">
+              <option value="yellow">Yellow</option>
+              <option value="blue">Blue</option>
+            </select>
+          
+            <label for="size">Size:</label>
+            <select id="size5" onchange="updateProduct5()">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+            </select><br>
+            <button class="cart">Add To Cart</button>
+            <button class="buy-now">Buy Now</button>
+        </div>
+        <div id="box6"class="product-item">
+          <img id="product-img6" height="250px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQakJDKah3SlKBZjdaXQg_QXCiWvg1cU5dz2Q&s" alt="prodct6" >
+          <h2 id="product-description6">yellow Small Dress</h2>
+          <p id="product-price6">$49</p>
+          <label for="color">Color:</label>
+          <select id="color6" onchange="updateProduct6()">
+            <option value="yellow">Yellow</option>
+            <option value="blue">Blue</option>
+          </select>
+        
+          <label for="size">Size:</label>
+          <select id="size6" onchange="updateProduct6()">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+          </select><br>
+          <button class="cart">Add To Cart</button>
+          <button class="buy-now">Buy Now</button>
+      </div>
+
+                
+           
+        </section>
+        <section id="Contact" class="section2">
+          <div class="serv">
+            <h1>Our services</h1>
+            <p  style="color: darkblue; font-size: 1.2rem;" >Summary: E-commerce businesses offer a range of services to make online shopping easy and convenient.<br> These services include online storefronts, payment processing, <br>shipping and delivery, customer service, and product customization.</p>
+        </div>
+          <h1>Contact us</h1>
+          <div class="contact">
+              <a href="#"><i class='bx bxl-facebook'></i></a>
+              <a href="#"><i class='bx bxl-instagram'></i></a>
+              <a href="#"><i class='bx bxl-whatsapp'></i></a>
+              <a href="#"><i class='bx bxl-twitter'></i></a>
+          </div>
+          <h2>Thank you..</h2>
+
+        </section>
+    </div>
+      <script src="index.js"></script>
+</body>
+</html>
+    
